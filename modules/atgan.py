@@ -189,7 +189,7 @@ def evaluate_atgan(
     print(f"AT-GAN Attack Success Rate: {fooling_rate:.2f}%")
     return fooling_rate
 
-def generate_and_save_adv_examples(atgan, f_target, noise_size, n_classes, num_examples_per_class, save_dir):
+def generate_and_save_adv_examples(adversarial_generator, f_target, noise_size, n_classes, num_examples_per_class, save_dir):
     """Generates and saves adversarial examples using the AT-GAN."""
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
@@ -198,7 +198,7 @@ def generate_and_save_adv_examples(atgan, f_target, noise_size, n_classes, num_e
         z = tf.random.normal([num_examples_per_class, noise_size])
         target_labels = np.full((num_examples_per_class,), target_class)
 
-        adv_examples = atgan.G_attack([z, target_labels], training=False) # Generate adversarial examples
+        adv_examples = adversarial_generator([z, target_labels], training=False) # Generate adversarial examples
         adv_examples = ((adv_examples + 1) * 127.5).numpy().astype(np.uint8)  # Rescale to 0-255
 
         for i, adv_example in enumerate(adv_examples):
@@ -301,18 +301,12 @@ if __name__ == "__main__":
 
     #======================================================================================================================
 
-    # ==================================== LOAD MODEL ================================================
-    # original_model = K.models.load_model("cnn_variation_model.keras")
-    # original_model.trainable = False  # Freeze weights
-    original_model = K.models.load_model("models/atgan/f_target.keras")
-    original_model.trainable = False  # Freeze weights
-
-    adversarial_generator = K.models.load_model("models/acgan/generator.keras")
-    # IF USE AT-GAN
-    # adversarial_generator = K.models.load_model("models/atgan/g_attack.keras")
-
-    target_classifier = K.models.load_model("models/atgan/f_target.keras")
-    target_classifier.trainable = False  # Freeze weights
+    # # ==================================== LOAD MODEL ================================================
+    # adversarial_generator = K.models.load_model("models/acgan/generator.keras")
+    # # IF USE AT-GAN
+    adversarial_generator = K.models.load_model("../models/atgan/g_attack.keras")
+    target_classifier = K.models.load_model("../models/target/f_target.keras")
+    # target_classifier.trainable = False  # Freeze weights
 
 
     #=================================================================================================
@@ -327,7 +321,7 @@ if __name__ == "__main__":
 
 
     # Generate and save adversarial examples from the AT-GAN ===========================================
-    num_examples_per_class = 10
-    save_dir = "adversarial_images"
-    generate_and_save_adv_examples(atgan, target_classifier, latent_dim, n_classes, num_examples_per_class, save_dir)
+    num_examples_per_class = 3
+    save_dir = "../data/atgan_images"
+    generate_and_save_adv_examples(adversarial_generator, target_classifier, latent_dim, n_classes, num_examples_per_class, save_dir)
     print(f"Adversarial examples saved in {save_dir}")

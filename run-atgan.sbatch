@@ -1,10 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=adversarial_testing
+#SBATCH --job-name=adversarial_defence
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=8                         # Allocate 16 cores per task
 #SBATCH --mem=32G
 #SBATCH --time 24:00:00
 #SBATCH --gres=gpu:ampere:1
+#SBATCH --constraint=a40
 #SBATCH --mail-type=BEGIN,END,FAIL                  # Email status changes
 #SBATCH --mail-user=hohoangphuoc@student.utwente.nl  # Your email address
 

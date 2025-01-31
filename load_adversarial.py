@@ -1,13 +1,16 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import tensorflow as tf
 import keras as K
 import numpy as np
 import matplotlib.pyplot as plt
-from modules.target import TargetClassifier
+from modules.target import TargetClassifier, DefenceCNN
 from modules.acgan import ACGAN, Generator, Discriminator
 from modules.atgan import ATGAN, Attack_Generator
+from time import time
+print(os.getcwd())
+
 # ==================================================================================================================
 #                            HELPER FUNCTIONS
 #===================================================================================================================
@@ -45,8 +48,7 @@ def display_images(
     # Close the figure to free up memory
     # plt.show()
     plt.close(fig)
-#================================================================================================================
-
+# =================================================================================================================
 def evaluate_atn(
     # atgan,
     adversarial_generator, # adversarial model
@@ -161,11 +163,13 @@ if __name__ == "__main__":
     x_test = x_test.reshape(x_test.shape[0], 28, 28, 1).astype(np.float32)
     x_test = (x_test - 127.5) / 127.5  # Corrected variable name to x_test
 
-
+    #================================================================================================================
     latent_dim = 128 #noise size
+    num_epochs = 100  # Adjust as needed
+    batch_size = 100 # Adjust as needed
+
     n_classes = 10
-    batch_size = 100
-    epochs = 20
+    epochs = 50
     epochs_atgan = 20
 
     # PREPROCESS DATASET
@@ -184,18 +188,21 @@ if __name__ == "__main__":
     #-----------------------------------------------------------------------------------------------------------------
     
     adversarial_generator = K.models.load_model("./models/acgan/generator.keras")
-    target_classifier = K.models.load_model("./models/target/f_target.keras")
-
-    #-----------------------------------------------------------------------------------------------------------------
-
+    print("Adversarial Generator loaded.")
+    model_path = os.path.join("./models/Ensemble_Adversarial_Training_CNN.keras")
+    model = K.models.load_model(model_path)
+    print("Model loaded.")
+    #================================================================================================================
+    
+    
     # Evaluate the atn with plot
     try:
         attack_success_rate = evaluate_atn(
             adversarial_generator=adversarial_generator,
-            original_model=target_classifier,
+            original_model=model, #target_classifier but after adversarial training
             dataset=test_dataset,
-            num_batches=32,
-            image_save_path="./data/adversarial_images",
+            num_batches=2,
+            image_save_path="./data/adversarial_defence",
         )
         print(f"AT-GAN Attack Success Rate: {attack_success_rate:.2f}%")
     except Exception as e:

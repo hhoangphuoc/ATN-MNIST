@@ -123,8 +123,62 @@ class CNNVariation(K.Model):
         outputs = self.call(inputs)  # Use the defined layers
         model = tf.keras.Model(inputs=inputs, outputs=outputs, name=self.name)
         return model
-    
 
+
+@K.saving.register_keras_serializable()
+class DefenceCNN(K.Model):
+    """
+    CNN based model for defense.
+    """
+    def __init__(self, name="defence_cnn", **kwargs):
+        super(DefenceCNN, self).__init__(name=name, **kwargs)
+
+        # Define layers with inline configuration
+        self.conv1 = K.layers.Conv2D(
+            32,
+            kernel_size=(5, 5),
+            strides=1,
+            padding="same",
+            activation="relu",
+            input_shape=(28, 28, 1),
+        )
+        self.pool1 = K.layers.MaxPooling2D(pool_size=(2, 2))
+
+        self.conv2 = K.layers.Conv2D(
+            64, kernel_size=(5, 5), strides=1, padding="same", activation="relu"
+        )
+        self.pool2 = K.layers.MaxPooling2D(pool_size=(2, 2))
+
+        self.flatten = K.layers.Flatten()
+        self.fc1 = K.layers.Dense(1024, activation="relu")
+        self.dropout = K.layers.Dropout(0.2)
+        self.fc2 = K.layers.Dense(10, activation="softmax")  # Output layer
+
+    def call(self, inputs, training=False):
+        x = self.conv1(inputs)
+        x = self.pool1(x)
+        x = self.conv2(x)
+        x = self.pool2(x)
+        x = self.flatten(x)
+        x = self.fc1(x)
+        x = self.dropout(x, training=training)
+        x = self.fc2(x)
+        return x
+
+    def get_config(self):
+        config = super(DefenceCNN, self).get_config()
+        return config
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
+
+    def build_model(self):
+        inputs = K.layers.Input(shape=(28, 28, 1))
+        outputs = self.call(inputs)
+        model = K.models.Model(inputs=inputs, outputs=outputs, name=self.name)
+        return model
+        
 # =======================================================================================================================
 
 if __name__ == "__main__":
@@ -164,11 +218,14 @@ if __name__ == "__main__":
     #################################################################################################################
     #================================================================================================================
 
+
     #-----------------------------------------------------------------------------------------------------------------
     #                                           Train Target Classifier
     #-----------------------------------------------------------------------------------------------------------------
     # target_classifier = TargetClassifier(num_classes=10)
-    target_classifier = CNNVariation() # CNN variation
+    # target_classifier = CNNVariation() # CNN variation
+    defence_cnn = DefenceCNN()  # Defence CNN
+    target_classifier = defence_cnn.build_model()
 
     target_classifier.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
     target_classifier.fit(x_train, y_train, epochs=20, batch_size=batch_size)
@@ -182,5 +239,5 @@ if __name__ == "__main__":
 
     # Save the target_classifer
     # target_classifier.save("..models/target/f_target.keras")
-    target_classifier.save("../models/target/cnn_variation.keras")
+    target_classifier.save("../models/target/defence_cnn.keras")
     #================================================================================================================
