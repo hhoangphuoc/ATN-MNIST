@@ -31,13 +31,13 @@ def display_images(
         # Original image
         plt.subplot(2, num_images, i + 1)  # 2 rows, num_images columns, i-th subplot
         plt.imshow(tf.squeeze(original_images[i]), cmap="gray")
-        plt.title(f"Label: {y_true[i].numpy()}, Pred: {y_pred_original[i].numpy()}")
+        plt.title(f"Label: {y_true[i].numpy()},\nPred: {y_pred_original[i].numpy()}")
         plt.axis("off")
 
         # Adversarial image
         plt.subplot(2, num_images, i + 1 + num_images)  # 2 rows, num_images columns, i-th subplot
         plt.imshow(tf.squeeze(adversarial_images[i]), cmap="gray")
-        plt.title(f"\nTarget: {y_pred_original_label[i]}, Pred: {y_pred_adversarial[i].numpy()}")
+        plt.title(f"\nTarget: {y_pred_original_label[i]},\nPred: {y_pred_adversarial[i].numpy()}")
         plt.axis("off")
 
         # Save the figure
