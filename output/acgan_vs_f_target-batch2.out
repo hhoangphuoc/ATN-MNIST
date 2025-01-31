@@ -1,0 +1,126 @@
+	Adding nVidia Cuda Toolkit 12.4
+	Adding nvtop
+Currently Loaded Modulefiles:
+ 1) nvidia/cuda-12.4   2) nvidia/nvtop  
+Date              = Fri Jan 31 12:49:21 AM CET 2025
+Hostname          = ctit093
+Working Directory = /home/s2587130/GAN/ATN-MNIST
+Name of nodes used          : ctit093
+Gpu devices                 : 1
+Starting worker: 
+Number of CPU cores = 8
+SLURM_CPUS_PER_TASK:          8
+Number of GPUs:               1
+CUDA Home:                    /deepstore/software/nvidia/cuda-12.4
+CUDA Directory:               
+LD LIBRARY Path:              /deepstore/software/nvidia/cuda-12.4/lib64:/deepstore/software/nvidia/cuda-12.4/extras/CUPTI/lib64
+2025-01-31 00:49:22.594680: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-01-31 00:49:22.932545: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-01-31 00:49:23.069012: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-01-31 00:49:23.117988: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-01-31 00:49:23.419072: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-01-31 00:49:25.868538: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-01-31 00:49:30.732782: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 43598 MB memory:  -> device: 0, name: NVIDIA A40, pci bus id: 0000:5e:00.0, compute capability: 8.6
+/home/s2587130/GAN/ATN-MNIST/.venv/lib/python3.10/site-packages/keras/src/layers/convolutional/base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1738280973.341331   78623 service.cc:146] XLA service 0x7f63f4016960 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1738280973.341411   78623 service.cc:154]   StreamExecutor device (0): NVIDIA A40, Compute Capability 8.6
+2025-01-31 00:49:33.368729: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-01-31 00:49:33.473479: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8907
+I0000 00:00:1738280974.684289   78623 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1738280976.531986   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.609184   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.609874   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.610485   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.611046   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.616046   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.621991   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.622603   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.623200   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.623841   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.624484   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.625383   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.626017   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.626658   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.627238   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.627871   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.628777   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.646182   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.647438   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.652101   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.654389   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.671246   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.671778   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.672209   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.672668   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.673143   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.673609   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.674097   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.675398   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.675864   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.676346   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.676813   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.677345   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.677833   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.678297   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.678768   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.679348   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.680092   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.680811   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.681749   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.682585   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.683199   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.694036   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.707287   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.707713   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.708105   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.708491   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.708887   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.710191   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.710637   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.711081   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.711512   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.711944   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.712468   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.712925   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.713388   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.713975   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738280976.714545   78595 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+2025-01-31 00:49:37.844274: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Training set: (60000, 28, 28)
+Training label: (60000,)
+Test set: (10000, 28, 28)
+Test label: (10000,)
+Normalizing and Reshaping the data...
+Dataset loaded with normalization.
+---------------------------------------------------------
+Batch 1/2
+True Labels: [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9]
+Original Predictions: [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 5 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 5 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9]
+Adversarial Predictions: [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 5 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 5 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 2/2
+True Labels: [6 0 5 4 9 9 2 1 9 4 8 7 3 9 7 4 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0
+ 1 6 4 6 7 3 1 7 1 8 2 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3
+ 2 7 1 8 1 8 1 8 5 0 8 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2]
+Original Predictions: [6 0 5 4 9 9 2 1 9 4 8 7 3 9 7 9 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0
+ 1 6 4 6 7 3 1 7 1 8 2 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3
+ 2 7 1 8 1 8 1 8 5 0 8 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2]
+Adversarial Predictions: [6 0 5 4 9 9 2 1 9 4 8 7 3 9 7 9 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0
+ 1 2 4 6 7 3 1 7 1 8 2 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3
+ 2 7 1 8 1 8 1 8 5 0 8 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2]
+---------------------------------------------------------
+Total images: 1
+AT-GAN Attack Success Rate (Fooling Rate): 99.50%
+AT-GAN Attack Success Rate: 99.50%

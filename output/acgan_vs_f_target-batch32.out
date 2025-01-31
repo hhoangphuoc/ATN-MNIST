@@ -1,0 +1,516 @@
+	Adding nVidia Cuda Toolkit 12.4
+	Adding nvtop
+Currently Loaded Modulefiles:
+ 1) nvidia/cuda-12.4   2) nvidia/nvtop  
+Date              = Fri Jan 31 12:52:38 AM CET 2025
+Hostname          = ctit093
+Working Directory = /home/s2587130/GAN/ATN-MNIST
+Name of nodes used          : ctit093
+Gpu devices                 : 1
+Starting worker: 
+Number of CPU cores = 8
+SLURM_CPUS_PER_TASK:          8
+Number of GPUs:               1
+CUDA Home:                    /deepstore/software/nvidia/cuda-12.4
+CUDA Directory:               
+LD LIBRARY Path:              /deepstore/software/nvidia/cuda-12.4/lib64:/deepstore/software/nvidia/cuda-12.4/extras/CUPTI/lib64
+2025-01-31 00:52:39.823684: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-01-31 00:52:40.201308: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-01-31 00:52:40.357399: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-01-31 00:52:40.408613: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-01-31 00:52:40.711120: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-01-31 00:52:43.072210: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-01-31 00:52:48.068847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 43598 MB memory:  -> device: 0, name: NVIDIA A40, pci bus id: 0000:5e:00.0, compute capability: 8.6
+/home/s2587130/GAN/ATN-MNIST/.venv/lib/python3.10/site-packages/keras/src/layers/convolutional/base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1738281170.727472   79520 service.cc:146] XLA service 0x7f205c0041c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1738281170.727542   79520 service.cc:154]   StreamExecutor device (0): NVIDIA A40, Compute Capability 8.6
+2025-01-31 00:52:50.755268: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-01-31 00:52:50.857969: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8907
+I0000 00:00:1738281172.108157   79520 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1738281173.913599   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281173.990300   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281173.991008   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281173.991635   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281173.992219   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281173.997277   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.001895   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.002461   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.003017   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.003666   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.004320   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.005225   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.005861   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.006533   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.007183   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.007832   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.008756   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.024227   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.025482   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.029573   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.031846   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.049018   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.049560   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.049997   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.050454   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.050929   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.051392   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.051888   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.053164   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.053635   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.054121   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.054583   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.055116   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.055602   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.056071   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.056540   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.057118   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.057862   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.058576   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.059507   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.060342   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.060956   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.072126   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.086320   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.086743   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.087139   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.087524   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.087920   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.089226   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.089675   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.090117   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.090546   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.090982   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.091508   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.091972   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.092435   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.093021   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+W0000 00:00:1738281174.093597   79494 gpu_timer.cc:114] Skipping the delay kernel, measurement accuracy will be reduced
+2025-01-31 00:53:09.293869: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Training set: (60000, 28, 28)
+Training label: (60000,)
+Test set: (10000, 28, 28)
+Test label: (10000,)
+Normalizing and Reshaping the data...
+Dataset loaded with normalization.
+---------------------------------------------------------
+Batch 1/32
+True Labels: [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 3 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 9 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9]
+Original Predictions: [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 5 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 5 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 6 1 3 6 9 3 1 4 1 7 6 9]
+Adversarial Predictions: [7 2 1 0 4 1 4 9 5 9 0 6 9 0 1 5 9 7 5 4 9 6 6 5 4 0 7 4 0 1 3 1 3 4 7 2 7
+ 1 2 1 1 7 4 2 3 5 1 2 4 4 6 3 5 5 6 0 4 1 9 5 7 8 5 3 7 4 6 4 3 0 7 0 2 9
+ 1 7 3 2 9 7 7 6 2 7 8 4 7 3 2 1 3 6 9 3 1 4 1 7 6 9]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 2/32
+True Labels: [6 0 5 4 9 9 2 1 9 4 8 7 3 9 7 4 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0
+ 1 6 4 6 7 3 1 7 1 8 2 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3
+ 2 7 1 8 1 8 1 8 5 0 8 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2]
+Original Predictions: [6 0 5 4 9 9 2 1 9 4 8 7 3 9 7 9 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0
+ 1 6 4 6 7 3 1 7 1 8 2 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3
+ 2 7 1 8 1 8 1 8 5 0 8 9 2 5 0 1 1 1 0 9 0 3 1 6 4 2]
+Adversarial Predictions: [6 0 5 4 9 9 2 2 9 4 8 7 3 9 7 9 4 4 9 2 5 4 7 6 7 9 0 5 8 5 6 6 5 7 8 1 0
+ 1 6 4 6 7 3 1 7 2 8 2 0 2 9 9 5 5 1 5 6 0 3 4 4 6 5 4 6 5 4 5 1 4 4 7 2 3
+ 2 7 1 8 1 8 1 8 5 0 8 9 2 5 0 1 1 2 0 9 0 3 1 6 4 2]
+---------------------------------------------------------
+Total images: 3
+---------------------------------------------------------
+Batch 3/32
+True Labels: [3 6 1 1 1 3 9 5 2 9 4 5 9 3 9 0 3 6 5 5 7 2 2 7 1 2 8 4 1 7 3 3 8 8 7 9 2
+ 2 4 1 5 9 8 7 2 3 0 4 4 2 4 1 9 5 7 7 2 8 2 6 8 5 7 7 9 1 8 1 8 0 3 0 1 9
+ 9 4 1 8 2 1 2 9 7 5 9 2 6 4 1 5 8 2 9 2 0 4 0 0 2 8]
+Original Predictions: [3 6 1 1 1 3 9 5 2 9 4 5 9 3 9 0 3 6 5 5 7 2 2 7 1 2 8 4 1 7 3 3 8 8 7 9 2
+ 2 4 1 5 9 8 7 2 3 0 4 4 2 4 1 9 5 7 7 2 8 2 6 8 5 7 7 9 1 8 1 8 0 3 0 1 9
+ 9 4 1 8 2 1 2 9 7 5 9 2 6 4 1 5 8 2 9 2 0 4 0 0 2 8]
+Adversarial Predictions: [3 6 1 1 1 3 9 5 2 9 4 5 9 3 9 0 3 6 5 5 7 2 2 7 1 2 8 4 1 7 3 3 8 8 7 9 2
+ 2 4 1 5 9 8 7 2 3 0 4 4 2 4 1 9 5 7 7 2 8 2 6 8 5 7 7 9 1 8 1 8 0 3 0 1 9
+ 9 4 2 8 2 1 2 9 7 5 9 2 6 4 1 5 8 2 9 2 0 4 0 0 2 8]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 4/32
+True Labels: [4 7 1 2 4 0 2 7 4 3 3 0 0 3 1 9 6 5 2 5 9 2 9 3 0 4 2 0 7 1 1 2 1 5 3 3 9
+ 7 8 6 5 6 1 3 8 1 0 5 1 3 1 5 5 6 1 8 5 1 7 9 4 6 2 2 5 0 6 5 6 3 7 2 0 8
+ 8 5 4 1 1 4 0 3 3 7 6 1 6 2 1 9 2 8 6 1 9 5 2 5 4 4]
+Original Predictions: [4 7 1 2 4 0 2 7 4 3 3 0 0 3 1 9 6 5 2 5 8 7 9 3 0 4 2 0 7 1 1 2 1 5 3 3 9
+ 7 8 6 3 6 1 3 8 1 0 5 1 3 1 5 5 6 1 8 5 1 7 9 4 6 2 2 5 0 6 5 6 3 7 2 0 8
+ 8 5 4 1 1 4 0 3 3 7 6 1 6 2 1 9 2 8 6 1 9 5 2 5 4 4]
+Adversarial Predictions: [4 7 1 2 4 0 2 7 4 3 3 0 0 3 2 9 6 5 2 5 8 7 9 3 0 4 2 0 7 1 1 2 1 5 3 3 9
+ 7 8 6 3 6 1 3 8 1 0 5 1 3 1 5 5 6 2 8 5 1 7 9 4 6 2 2 5 0 6 5 6 3 7 2 0 8
+ 8 5 4 1 1 4 0 3 3 7 6 1 6 2 1 9 2 8 6 1 9 5 2 5 4 4]
+---------------------------------------------------------
+Total images: 2
+---------------------------------------------------------
+Batch 5/32
+True Labels: [2 8 3 8 2 4 5 0 3 1 7 7 5 7 9 7 1 9 2 1 4 2 9 2 0 4 9 1 4 8 1 8 4 5 9 8 8
+ 3 7 6 0 0 3 0 2 6 6 4 9 3 3 3 2 3 9 1 2 6 8 0 5 6 6 6 3 8 8 2 7 5 8 9 6 1
+ 8 4 1 2 5 9 1 9 7 5 4 0 8 9 9 1 0 5 2 3 7 8 9 4 0 6]
+Original Predictions: [2 8 3 8 2 4 5 0 3 1 7 7 5 7 9 7 1 9 2 1 4 2 9 2 0 4 9 1 4 8 1 8 4 5 9 8 8
+ 3 7 6 0 0 3 0 2 0 6 4 9 5 3 3 2 3 9 1 2 6 8 0 5 6 6 6 3 8 8 2 7 5 8 9 6 1
+ 8 4 1 2 5 9 1 9 7 5 4 0 8 9 9 1 0 5 2 3 7 8 9 4 0 6]
+Adversarial Predictions: [2 8 3 8 2 4 5 0 3 1 7 7 5 7 9 7 1 9 2 1 4 2 9 2 0 4 9 1 4 8 1 8 4 5 9 8 8
+ 3 7 6 0 0 3 0 2 0 6 4 9 5 3 3 2 3 9 1 2 6 8 0 5 6 6 6 3 8 8 2 7 5 8 9 6 1
+ 8 4 1 2 5 9 1 9 7 5 4 0 8 9 9 1 0 5 2 3 7 8 9 4 0 6]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 6/32
+True Labels: [3 9 5 2 1 3 1 3 6 5 7 4 2 2 6 3 2 6 5 4 8 9 7 1 3 0 3 8 3 1 9 3 4 4 6 4 2
+ 1 8 2 5 4 8 8 4 0 0 2 3 2 7 7 0 8 7 4 4 7 9 6 9 0 9 8 0 4 6 0 6 3 5 4 8 3
+ 3 9 3 3 3 7 8 0 8 2 1 7 0 6 5 4 3 8 0 9 6 3 8 0 9 9]
+Original Predictions: [3 9 5 2 1 3 1 3 6 5 7 4 2 2 6 3 2 6 5 4 8 9 7 1 3 0 3 8 3 1 9 3 4 4 6 4 2
+ 1 8 2 5 4 8 8 4 0 0 2 3 2 7 7 0 8 7 4 4 7 9 6 9 0 9 8 0 4 6 0 6 3 5 4 8 3
+ 3 9 3 3 3 7 8 0 3 7 1 7 0 6 5 4 3 8 0 9 6 3 8 0 9 9]
+Adversarial Predictions: [3 9 5 2 1 3 1 3 6 5 7 4 2 2 6 3 2 2 5 4 8 9 7 1 3 0 3 8 3 1 9 3 4 4 6 4 2
+ 1 8 2 5 4 8 8 4 0 0 2 3 2 7 7 0 8 7 4 4 7 9 6 9 0 9 8 0 4 6 0 6 3 5 4 8 3
+ 3 9 3 3 3 7 8 0 3 7 1 7 0 6 5 4 3 8 0 9 6 3 8 0 9 9]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 7/32
+True Labels: [6 8 6 8 5 7 8 6 0 2 4 0 2 2 3 1 9 7 5 1 0 8 4 6 2 6 7 9 3 2 9 8 2 2 9 2 7
+ 3 5 9 1 8 0 2 0 5 2 1 3 7 6 7 1 2 5 8 0 3 7 2 4 0 9 1 8 6 7 7 4 3 4 9 1 9
+ 5 1 7 3 9 7 6 9 1 3 7 8 3 3 6 7 2 8 5 8 5 1 1 4 4 3]
+Original Predictions: [6 8 6 8 5 7 8 6 0 2 4 0 2 2 3 1 9 7 5 8 0 8 4 6 2 6 7 9 3 2 9 8 2 2 9 2 7
+ 3 5 9 1 8 0 2 0 5 2 1 3 7 6 7 1 2 5 8 0 3 7 7 4 0 9 1 8 6 7 7 4 3 4 9 1 9
+ 5 1 7 3 9 7 6 9 1 3 2 8 3 3 6 7 2 8 5 8 5 1 1 4 4 3]
+Adversarial Predictions: [6 8 6 8 5 7 8 2 0 2 4 0 2 2 3 1 9 7 5 8 0 8 4 6 2 6 7 9 3 2 9 8 2 2 9 2 7
+ 3 5 9 1 8 0 2 0 5 2 1 3 7 6 7 1 2 5 8 0 3 7 7 4 0 9 1 8 6 7 7 4 3 4 9 1 9
+ 5 1 7 3 9 7 6 9 2 3 2 8 3 3 6 7 2 8 5 8 5 1 1 4 4 3]
+---------------------------------------------------------
+Total images: 2
+---------------------------------------------------------
+Batch 8/32
+True Labels: [1 0 7 7 0 7 9 4 4 8 5 5 4 0 8 2 1 0 8 4 5 0 4 0 6 1 7 3 2 6 7 2 6 9 3 1 4
+ 6 2 5 4 2 0 6 2 1 7 3 4 1 0 5 4 3 1 1 7 4 9 9 4 8 4 0 2 4 5 1 1 6 4 7 1 9
+ 4 2 4 1 5 5 3 8 3 1 4 5 6 8 9 4 1 5 3 8 0 3 2 5 1 2]
+Original Predictions: [1 0 7 7 0 7 9 4 4 8 5 5 4 0 8 2 1 0 8 4 5 0 4 0 6 1 5 3 2 6 7 2 6 9 3 1 4
+ 6 2 5 4 2 0 6 2 1 7 3 4 1 0 5 4 3 1 1 7 4 9 9 4 8 4 0 2 4 5 1 1 6 4 7 1 9
+ 4 2 4 1 5 5 3 8 3 1 4 5 6 8 9 4 1 5 3 8 0 3 2 5 1 2]
+Adversarial Predictions: [1 0 7 7 0 7 9 4 4 8 5 5 4 0 8 2 1 0 8 4 5 0 4 0 6 1 5 3 2 6 7 2 6 9 3 1 4
+ 6 2 5 4 2 0 6 2 1 7 3 4 1 0 5 4 3 1 1 7 4 9 9 4 8 4 0 2 4 5 1 1 6 4 7 1 9
+ 4 2 4 1 5 5 3 8 3 1 4 5 6 8 9 4 1 5 3 8 0 3 2 5 1 2]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 9/32
+True Labels: [8 3 4 4 0 8 8 3 3 1 7 3 5 9 6 3 2 6 1 3 6 0 7 2 1 7 1 4 2 4 2 1 7 9 6 1 1
+ 2 4 8 1 7 7 4 8 0 7 3 1 3 1 0 7 7 0 3 5 5 2 7 6 6 9 2 8 3 5 2 2 5 6 0 8 2
+ 9 2 8 8 8 8 7 4 9 3 0 6 6 3 2 1 3 2 2 9 3 0 0 5 7 8]
+Original Predictions: [8 3 4 4 0 8 8 3 3 1 7 3 5 9 6 3 2 6 1 3 6 0 7 2 1 7 1 4 2 4 2 1 7 9 6 1 1
+ 2 4 8 1 7 7 4 8 0 7 3 1 3 1 0 7 7 0 3 5 5 2 7 6 6 9 2 8 3 5 2 2 5 6 0 8 2
+ 9 2 8 8 8 8 7 4 7 3 0 6 6 3 2 1 3 2 2 9 3 0 0 5 7 8]
+Adversarial Predictions: [8 3 4 4 0 8 8 3 3 1 7 3 5 9 6 3 2 6 1 3 6 0 7 2 1 7 1 4 2 4 2 1 7 9 6 1 1
+ 2 4 8 1 7 7 4 8 0 7 3 1 3 1 0 7 7 0 3 5 5 2 7 6 6 9 2 8 3 5 2 2 5 6 0 8 2
+ 9 2 8 8 8 8 7 4 7 3 0 2 6 3 2 1 3 2 2 9 3 0 0 5 7 8]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 10/32
+True Labels: [1 4 4 6 0 2 9 1 4 7 4 7 3 9 8 8 4 7 1 2 1 2 2 3 2 3 2 3 9 1 7 4 0 3 5 5 8
+ 6 3 2 6 7 6 6 3 2 7 8 1 1 7 5 6 4 9 5 1 3 3 4 7 8 9 1 1 6 9 1 4 4 5 4 0 6
+ 2 2 3 1 5 1 2 0 3 8 1 2 6 7 1 6 2 3 9 0 1 2 2 0 8 9]
+Original Predictions: [1 4 4 6 0 2 9 1 4 7 4 7 3 9 8 8 4 7 1 2 1 2 2 3 2 3 2 3 9 1 7 4 0 3 5 5 8
+ 6 5 0 6 7 6 6 3 2 7 8 1 1 7 5 6 4 9 5 1 3 3 4 7 8 9 1 1 6 9 1 4 4 5 4 0 6
+ 2 2 3 1 5 1 2 0 3 8 1 2 6 7 1 6 2 3 9 0 1 2 2 0 8 9]
+Adversarial Predictions: [1 4 4 6 0 2 9 1 4 7 4 7 3 9 8 8 4 7 1 2 1 2 2 3 2 3 2 3 9 1 7 4 0 3 5 5 8
+ 6 5 0 6 7 6 6 3 2 7 8 1 1 7 5 2 4 9 5 1 3 3 4 7 8 9 1 1 6 9 1 4 4 5 4 0 6
+ 2 2 3 1 5 1 2 0 3 8 1 2 6 7 1 6 2 3 9 0 1 2 2 0 8 9]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 11/32
+True Labels: [9 0 2 5 1 9 7 8 1 0 4 1 7 9 6 4 2 6 8 1 3 7 5 4 4 1 8 1 3 8 1 2 5 8 0 6 2
+ 1 1 7 1 5 3 4 6 9 5 0 9 2 2 4 8 2 1 7 2 4 9 4 4 0 3 9 2 2 3 3 8 3 5 7 3 5
+ 8 1 2 4 4 6 4 9 5 1 0 6 9 5 9 5 9 7 3 8 0 3 7 1 3 6]
+Original Predictions: [9 0 2 5 1 9 7 8 1 0 4 1 7 9 5 4 2 6 8 1 3 7 5 4 4 1 8 1 3 8 1 2 5 8 0 6 2
+ 1 1 7 1 5 3 4 6 9 5 0 9 2 2 4 8 2 1 7 2 4 9 4 4 0 3 9 2 2 3 3 8 3 5 7 3 5
+ 8 1 2 4 4 6 4 9 5 1 0 6 9 5 9 5 9 7 3 8 0 3 7 1 3 6]
+Adversarial Predictions: [9 0 2 5 1 9 7 8 1 0 4 1 7 9 5 4 2 6 8 1 3 7 5 4 4 1 8 1 3 8 1 2 5 8 0 6 2
+ 1 1 7 1 5 3 4 6 9 5 0 9 2 2 4 8 2 1 7 2 4 9 4 4 0 3 9 2 2 3 3 8 3 5 7 3 5
+ 8 1 2 4 4 6 4 9 5 1 0 2 9 5 9 5 9 7 3 8 0 3 7 1 3 6]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 12/32
+True Labels: [7 8 5 9 7 9 6 9 6 3 7 4 4 5 3 5 4 7 8 7 8 0 7 6 8 8 7 3 3 1 9 5 2 7 3 5 1
+ 1 2 1 4 7 4 7 5 4 5 4 0 8 3 6 9 6 0 2 7 4 4 4 4 6 6 4 7 9 3 4 5 5 8 7 3 7
+ 2 7 0 2 4 1 1 6 6 9 2 8 7 2 0 1 5 0 9 1 7 0 6 0 8 6]
+Original Predictions: [7 8 5 9 7 9 6 9 6 3 7 4 6 5 3 5 4 7 8 7 8 0 7 6 8 8 7 3 3 1 9 5 2 7 3 5 1
+ 1 2 1 4 7 4 7 5 4 5 4 0 8 3 6 9 6 0 2 7 4 4 4 4 6 6 4 7 9 3 4 5 5 8 7 3 7
+ 2 7 0 2 4 1 1 6 5 9 2 8 7 2 0 1 5 0 9 1 7 0 6 0 8 6]
+Adversarial Predictions: [7 8 5 9 7 9 6 9 6 3 7 4 6 5 3 5 4 7 8 7 8 0 7 6 8 8 7 3 3 1 9 5 2 7 3 5 1
+ 1 2 1 4 7 4 7 5 4 5 4 0 8 3 6 9 2 0 2 7 4 4 4 4 6 2 4 7 9 3 4 5 5 8 7 3 7
+ 2 7 0 2 4 1 1 6 5 9 2 8 7 2 0 1 5 0 9 1 7 0 6 0 8 6]
+---------------------------------------------------------
+Total images: 2
+---------------------------------------------------------
+Batch 13/32
+True Labels: [8 1 8 0 3 3 7 2 3 6 2 1 6 1 1 3 7 9 0 8 0 5 4 0 2 8 7 2 9 8 4 0 9 5 8 5 1
+ 2 1 3 1 7 4 5 7 2 0 9 8 8 6 2 5 4 1 9 2 1 5 8 7 0 2 4 4 3 6 8 8 2 4 0 5 0
+ 4 4 7 9 3 4 1 5 9 7 3 5 8 8 0 5 3 3 6 6 0 1 6 0 3 5]
+Original Predictions: [8 1 8 0 3 3 7 2 3 6 2 1 6 1 1 3 7 9 0 8 0 5 4 0 2 8 2 2 9 8 4 0 4 5 8 5 1
+ 2 1 3 1 7 9 5 7 2 0 5 8 8 6 2 5 4 1 9 2 1 5 8 7 0 2 4 4 3 6 8 8 2 4 0 5 0
+ 4 4 7 9 3 4 1 5 9 7 3 5 8 8 0 5 3 3 6 6 0 1 6 0 3 5]
+Adversarial Predictions: [8 1 8 0 3 3 7 2 3 6 2 1 6 1 1 3 7 9 0 8 0 5 4 0 2 8 2 2 9 8 4 0 4 5 8 5 1
+ 2 1 3 1 7 9 5 7 2 0 5 8 8 6 2 5 4 1 9 2 1 5 8 7 0 2 4 4 3 6 8 8 2 4 0 5 0
+ 4 4 7 9 3 4 1 5 9 7 3 5 8 8 0 5 3 3 2 6 0 1 6 0 3 5]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 14/32
+True Labels: [4 4 1 2 9 1 4 6 9 9 3 9 8 4 4 3 1 3 1 8 8 7 9 4 8 8 7 9 7 1 4 5 6 0 5 2 2
+ 2 1 5 5 2 4 9 6 2 7 7 2 2 1 1 2 8 3 7 2 4 1 7 1 7 6 7 8 2 7 3 1 7 5 8 2 6
+ 2 2 5 6 5 0 9 2 4 3 3 9 7 6 6 8 0 4 1 5 8 2 9 1 8 0]
+Original Predictions: [4 4 1 2 9 1 4 6 9 9 3 9 8 4 4 3 1 3 1 0 8 7 9 4 8 8 7 9 7 1 4 5 6 0 5 2 2
+ 2 1 5 5 2 4 9 6 2 7 7 2 2 1 1 2 8 3 7 2 4 1 7 1 7 6 7 8 2 7 3 1 7 5 8 2 6
+ 2 2 5 6 5 0 9 2 4 3 3 9 7 6 6 8 0 4 1 3 8 8 9 1 8 0]
+Adversarial Predictions: [4 4 1 2 9 1 4 6 9 9 3 9 8 4 4 3 1 3 1 0 8 7 9 4 8 8 7 9 7 1 4 5 6 0 5 2 2
+ 2 1 5 5 2 4 9 6 2 7 7 2 2 1 1 2 8 3 7 2 4 1 7 1 7 6 7 8 2 7 3 1 7 5 8 2 6
+ 2 2 5 6 5 0 9 2 4 3 3 9 7 6 6 8 0 4 1 3 8 8 9 1 8 0]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 15/32
+True Labels: [6 7 2 1 0 5 5 2 0 2 2 0 2 4 9 8 0 9 9 4 6 5 4 9 1 8 3 4 9 9 1 2 2 8 1 9 6
+ 4 0 9 4 8 3 8 6 0 2 5 1 9 6 2 9 4 0 9 6 0 6 2 5 4 2 3 8 4 5 5 0 3 8 5 3 5
+ 8 6 5 7 6 3 3 9 6 1 1 2 9 0 4 3 3 6 9 5 7 3 7 7 7 8]
+Original Predictions: [6 7 2 1 0 5 5 2 0 2 2 0 2 4 7 8 0 9 9 4 6 5 4 9 1 8 3 4 9 9 1 2 2 8 1 9 6
+ 4 0 9 4 8 3 8 6 0 2 5 1 9 6 2 9 4 0 9 6 0 6 2 5 4 2 3 8 4 5 5 0 3 8 5 3 5
+ 8 6 5 7 6 3 3 9 6 1 1 2 9 0 4 3 3 6 9 5 7 3 7 7 7 8]
+Adversarial Predictions: [6 7 2 1 0 5 5 2 0 2 2 0 2 4 7 8 0 9 9 4 6 5 4 9 1 8 3 4 9 9 1 2 2 8 1 9 6
+ 4 0 9 4 8 3 8 2 0 2 5 1 9 6 2 9 4 0 9 6 0 6 2 5 4 2 3 8 4 5 5 0 3 8 5 3 5
+ 8 6 5 7 6 3 3 9 6 1 1 2 9 0 4 3 3 6 9 5 7 3 7 7 7 8]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 16/32
+True Labels: [7 9 8 3 0 7 2 7 9 4 5 4 9 3 2 1 4 0 2 3 7 5 7 8 8 5 0 1 1 4 8 3 9 0 0 0 6
+ 6 2 3 7 8 4 7 7 9 2 4 1 4 5 2 4 9 9 1 8 4 0 9 8 4 8 7 7 0 7 8 8 6 0 4 8 8
+ 2 4 7 6 6 6 4 7 1 8 8 2 3 6 3 0 0 3 7 6 9 7 9 9 5 4]
+Original Predictions: [7 9 8 3 0 7 2 7 9 4 5 4 9 3 2 1 4 0 2 3 7 5 7 8 8 5 0 3 1 4 8 3 9 0 0 0 6
+ 6 2 3 7 8 4 7 7 9 2 4 1 4 5 2 4 3 9 1 8 4 0 5 8 4 8 7 7 0 7 8 8 6 0 4 8 8
+ 2 4 7 6 6 6 4 7 1 8 8 2 3 6 3 0 0 3 7 6 9 7 9 9 5 4]
+Adversarial Predictions: [7 9 8 3 0 7 2 7 9 4 5 4 9 3 2 1 4 0 2 3 7 5 7 8 8 5 0 3 1 4 8 3 9 0 0 0 6
+ 6 2 3 7 8 4 7 7 9 2 4 1 4 5 2 4 3 9 1 8 4 0 5 8 4 8 7 7 0 7 8 8 6 0 4 8 8
+ 2 4 7 6 6 6 4 7 1 8 8 2 3 6 3 0 0 3 7 6 9 7 9 9 5 4]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 17/32
+True Labels: [3 3 6 1 2 3 7 3 3 2 0 3 3 8 4 3 6 3 5 0 2 0 9 0 7 4 6 9 3 5 1 9 6 1 4 5 4
+ 5 0 5 9 5 2 1 2 9 1 9 9 4 0 8 4 5 2 9 2 1 2 1 7 3 6 8 8 4 9 1 9 8 5 7 5 1
+ 1 8 6 5 2 4 4 3 2 3 5 6 8 8 6 2 3 1 0 5 8 9 2 9 6 7]
+Original Predictions: [3 3 6 1 2 3 7 3 3 6 0 3 3 8 4 3 6 3 5 0 2 0 9 0 7 4 6 9 3 5 1 9 6 1 4 5 4
+ 5 0 5 9 5 2 1 2 9 1 9 9 4 0 8 4 5 2 9 2 1 2 1 7 3 6 8 8 4 9 1 9 8 5 7 5 1
+ 1 8 6 5 2 4 4 3 2 3 5 6 8 8 6 2 3 1 0 5 8 9 2 9 6 7]
+Adversarial Predictions: [3 3 6 1 2 3 7 3 3 6 0 3 3 8 4 3 6 3 5 0 2 0 9 0 7 4 6 9 3 5 1 9 6 1 4 5 4
+ 5 0 5 9 5 2 1 2 9 1 9 9 4 0 8 4 5 2 9 2 1 2 1 7 3 6 8 8 4 9 2 9 8 5 7 5 1
+ 1 8 6 5 2 4 4 3 2 3 5 6 8 8 6 2 3 2 0 5 8 9 2 9 6 7]
+---------------------------------------------------------
+Total images: 2
+---------------------------------------------------------
+Batch 18/32
+True Labels: [0 4 8 7 1 7 4 1 0 9 7 2 0 0 9 1 7 8 7 8 4 7 2 0 4 6 0 3 1 1 3 3 9 6 7 4 1
+ 5 3 0 8 7 3 9 6 9 3 5 0 2 7 4 5 1 7 5 8 0 8 8 1 5 0 3 0 3 1 4 0 3 7 2 7 1
+ 8 0 7 0 4 3 1 9 8 7 7 1 4 9 9 3 2 1 7 9 0 2 0 3 3 7]
+Original Predictions: [0 4 8 7 1 7 4 1 0 8 7 2 0 0 9 1 7 8 7 8 4 7 2 0 4 6 0 3 1 1 3 3 9 6 7 4 1
+ 5 3 0 8 7 3 9 6 9 3 5 0 2 7 4 5 1 7 5 8 0 8 8 1 5 0 3 0 3 1 4 0 3 7 2 7 1
+ 8 0 7 0 4 3 1 9 8 7 7 1 4 9 9 3 2 1 7 9 0 2 0 3 3 7]
+Adversarial Predictions: [0 4 8 7 2 7 4 1 0 8 7 2 0 0 9 1 7 8 7 8 4 7 2 0 4 6 0 3 1 1 3 3 9 6 7 4 1
+ 5 3 0 8 7 3 9 6 9 3 5 0 2 7 4 5 1 7 5 8 0 8 8 1 5 0 3 0 3 1 4 0 3 7 2 7 1
+ 8 0 7 0 4 3 1 9 8 7 7 1 4 9 9 3 2 2 7 9 0 2 0 3 3 7]
+---------------------------------------------------------
+Total images: 2
+---------------------------------------------------------
+Batch 19/32
+True Labels: [6 9 2 3 3 7 7 0 0 7 5 2 9 8 7 4 4 2 6 6 1 9 6 8 2 9 0 8 3 1 1 6 3 5 1 1 1
+ 3 1 2 3 0 2 0 1 3 5 5 7 4 8 9 6 9 6 8 3 6 6 8 5 1 4 2 4 4 5 1 1 9 0 2 4 9
+ 5 7 1 8 8 5 6 9 8 7 1 1 6 7 6 3 2 2 0 8 9 2 5 1 0 8]
+Original Predictions: [6 9 2 3 3 7 7 0 0 7 5 2 9 8 7 4 4 2 6 6 1 9 6 8 2 9 0 8 3 1 1 6 3 5 1 1 1
+ 3 1 2 3 0 2 0 1 3 5 5 7 4 8 9 6 9 6 8 3 6 6 8 5 1 4 2 4 4 5 1 1 9 0 2 4 9
+ 5 7 1 8 3 5 6 9 8 7 1 1 6 7 6 3 2 2 0 8 9 2 5 1 0 8]
+Adversarial Predictions: [6 9 2 3 3 7 7 0 0 7 5 2 9 8 7 4 4 2 2 6 1 9 6 8 2 9 0 8 3 2 1 6 3 5 1 1 1
+ 3 1 2 3 0 2 0 1 3 5 5 7 4 8 9 2 9 6 8 3 6 6 8 5 1 4 2 4 4 5 1 1 9 0 2 4 9
+ 5 7 1 8 3 5 6 9 8 7 1 1 6 7 6 3 2 2 0 8 9 2 5 1 0 8]
+---------------------------------------------------------
+Total images: 3
+---------------------------------------------------------
+Batch 20/32
+True Labels: [1 9 5 7 9 6 9 0 6 1 5 5 8 3 8 2 6 5 0 7 4 6 1 3 4 7 3 2 3 4 2 5 2 7 1 7 2
+ 6 4 1 5 7 8 6 0 1 8 2 5 7 7 6 9 3 5 8 4 2 4 0 8 8 3 4 9 2 7 5 8 6 5 6 0 8
+ 6 7 3 6 4 9 4 6 6 3 2 4 1 0 1 4 6 2 9 1 1 0 6 3 9 5]
+Original Predictions: [1 4 5 7 9 6 9 0 6 1 5 5 8 3 8 2 6 5 0 7 4 6 1 3 4 7 3 2 3 4 2 5 2 7 1 7 2
+ 6 4 1 5 7 8 6 0 1 8 2 5 7 7 6 9 3 5 8 4 2 4 0 8 8 3 4 9 2 7 5 8 6 5 6 0 8
+ 6 7 3 6 4 9 4 6 6 3 2 4 1 0 1 4 6 2 9 1 1 0 6 3 9 5]
+Adversarial Predictions: [1 4 5 7 9 6 9 0 6 1 5 5 8 3 8 2 6 5 0 7 4 6 1 3 4 7 3 2 3 4 2 5 2 7 1 7 2
+ 6 4 1 5 7 8 6 0 1 8 2 5 7 7 6 9 3 5 8 4 2 4 0 8 8 3 4 9 2 7 5 8 6 5 6 0 8
+ 6 7 3 6 4 9 4 6 6 3 2 4 1 0 1 4 6 2 9 1 1 0 6 3 9 5]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 21/32
+True Labels: [6 5 6 5 8 4 6 4 3 9 1 3 4 1 9 1 7 1 1 9 3 5 4 0 7 3 6 1 7 5 5 3 3 0 1 5 7
+ 5 8 6 5 1 0 4 2 3 4 6 7 9 8 1 8 4 9 2 8 6 2 7 0 0 6 7 5 8 6 0 9 3 7 1 3 5
+ 4 3 3 5 5 6 3 0 2 3 4 2 3 0 9 9 4 7 2 8 4 7 0 6 2 8]
+Original Predictions: [6 5 6 5 8 4 6 4 3 9 1 3 4 1 9 1 7 1 2 9 3 5 4 0 7 3 6 1 7 5 5 3 3 0 1 3 7
+ 5 8 6 5 1 0 4 2 3 4 6 7 9 8 1 8 4 9 2 8 6 2 7 0 0 6 7 5 8 6 0 9 3 9 1 3 5
+ 4 3 3 5 5 6 3 0 2 3 4 2 3 0 9 9 4 7 2 8 4 7 0 6 0 8]
+Adversarial Predictions: [6 5 6 5 8 4 6 4 3 9 1 3 4 1 9 1 7 1 2 9 3 5 4 0 7 3 6 1 7 5 5 3 3 0 1 3 7
+ 5 8 6 5 1 0 4 2 3 4 6 7 9 8 1 8 4 9 2 8 6 2 7 0 0 6 7 5 8 6 0 9 3 9 2 3 5
+ 4 3 3 5 5 6 3 0 2 3 4 2 3 0 9 9 4 7 2 8 4 7 0 6 0 8]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 22/32
+True Labels: [5 2 8 5 7 3 0 8 2 3 2 8 2 5 5 7 6 4 6 8 4 8 2 7 4 5 2 0 3 9 4 6 7 2 5 6 1
+ 1 2 3 6 7 8 7 6 4 8 9 4 8 6 3 8 3 1 0 6 2 2 5 6 9 5 8 1 4 1 7 8 4 6 1 8 4
+ 3 1 2 8 0 8 5 9 1 4 2 0 2 7 0 9 0 2 5 7 6 7 9 4 2 6]
+Original Predictions: [5 2 8 5 7 3 0 8 2 3 2 8 2 5 5 7 6 4 0 8 4 8 2 7 4 5 2 0 3 8 9 6 7 2 5 1 1
+ 1 2 3 6 7 8 7 6 4 8 9 4 8 6 3 8 3 1 0 6 2 2 5 6 9 5 8 1 4 1 7 8 4 6 1 8 4
+ 3 1 2 8 0 8 5 9 3 4 2 0 2 7 0 9 0 2 5 7 6 7 9 4 2 6]
+Adversarial Predictions: [5 2 8 5 7 3 0 8 2 3 2 8 2 5 5 7 6 4 0 8 4 8 2 7 4 5 2 0 3 8 9 6 7 2 5 1 1
+ 1 2 3 6 7 8 7 6 4 8 9 4 8 6 3 8 3 1 0 6 2 2 5 6 9 5 8 1 4 1 7 8 4 6 1 8 4
+ 3 1 2 8 0 8 5 9 3 4 2 0 2 7 0 9 0 2 5 7 6 7 9 4 2 6]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 23/32
+True Labels: [2 4 4 8 0 4 4 5 8 0 6 8 9 8 5 6 9 0 4 8 7 1 3 4 5 8 0 9 1 3 3 6 9 8 7 1 0
+ 5 7 1 7 5 2 7 9 1 8 5 2 4 9 4 7 2 2 3 4 9 1 9 2 1 7 9 4 4 1 6 7 2 7 8 8 1
+ 9 7 1 1 7 5 3 3 5 1 3 7 6 1 3 8 7 5 9 9 0 0 2 8 8 2]
+Original Predictions: [2 4 4 8 0 4 4 5 8 0 6 8 9 8 5 6 9 0 4 8 7 1 3 4 5 8 0 9 1 3 3 6 9 8 7 1 0
+ 5 7 1 7 5 2 7 9 1 8 5 2 4 9 4 7 2 2 3 4 9 1 9 2 1 7 9 4 4 3 6 7 2 7 8 8 1
+ 9 7 1 1 7 5 5 3 5 1 3 7 6 1 3 8 7 5 9 4 0 0 2 8 8 2]
+Adversarial Predictions: [2 4 4 8 0 4 4 5 8 0 6 8 9 8 5 6 9 0 4 8 7 1 3 4 5 8 0 9 1 3 3 6 9 8 7 1 0
+ 5 7 1 7 5 2 7 9 1 8 5 2 4 9 4 7 2 2 3 4 9 1 9 2 1 7 9 4 4 3 6 7 2 7 8 8 1
+ 9 7 1 1 7 5 5 3 5 1 3 7 6 1 3 8 7 5 9 4 0 0 2 8 8 2]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 24/32
+True Labels: [3 7 1 3 0 3 4 4 3 8 9 2 3 9 7 1 1 7 0 4 9 6 5 9 1 7 0 2 0 0 4 6 7 0 7 1 4
+ 6 4 5 4 9 9 1 7 9 5 3 3 8 2 3 6 2 2 1 1 1 1 1 6 9 8 4 3 7 1 6 4 5 0 4 7 4
+ 2 4 0 7 0 1 9 8 8 6 0 0 4 9 6 8 2 2 3 8 4 8 2 2 1 7]
+Original Predictions: [3 7 1 3 0 3 4 4 3 8 9 2 3 9 7 1 1 7 0 4 9 6 5 9 1 7 0 2 0 0 4 6 7 0 7 1 4
+ 6 4 5 4 9 9 1 7 9 5 3 3 8 2 3 6 2 2 1 1 1 1 1 6 9 8 4 3 7 1 6 4 5 0 4 7 4
+ 2 4 0 7 0 1 9 8 8 6 0 0 4 9 6 8 2 2 3 8 4 8 2 2 1 7]
+Adversarial Predictions: [3 7 1 3 0 3 4 4 3 8 9 2 3 9 7 1 1 7 0 4 9 6 5 9 1 7 0 2 0 0 4 6 7 0 7 1 4
+ 6 4 5 4 9 9 1 7 9 5 3 3 8 2 3 2 2 2 1 1 1 1 1 6 9 8 4 3 7 1 6 4 5 0 4 7 4
+ 2 4 0 7 0 1 9 8 8 6 0 0 4 9 6 8 2 2 3 8 4 8 2 2 1 7]
+---------------------------------------------------------
+Total images: 1
+---------------------------------------------------------
+Batch 25/32
+True Labels: [5 4 4 0 4 3 9 7 3 1 0 1 2 5 9 2 1 0 1 8 9 1 6 8 3 8 9 3 6 2 8 3 2 2 1 0 4
+ 2 9 2 4 3 7 9 1 5 2 4 9 0 3 8 5 3 6 0 9 4 6 2 5 0 2 7 4 6 6 8 6 6 8 6 9 1
+ 7 2 5 9 9 0 7 2 7 6 7 0 6 5 2 4 7 2 0 9 9 2 2 9 4 4]
+Original Predictions: [5 4 4 0 4 3 9 7 3 1 0 1 2 5 9 2 1 0 1 8 9 1 6 8 3 8 9 3 6 2 8 3 2 2 1 0 4
+ 2 9 2 4 3 7 9 1 5 2 9 9 0 3 8 5 3 6 0 9 4 6 2 5 0 2 7 4 6 6 8 6 6 8 6 9 1
+ 7 2 5 9 9 0 7 2 7 6 7 0 6 5 2 4 7 2 0 9 9 2 2 9 4 4]
+Adversarial Predictions: [5 4 4 0 4 3 9 7 3 2 0 2 2 5 9 2 1 0 1 8 9 1 6 8 3 8 9 3 6 2 8 3 2 2 1 0 4
+ 2 9 2 4 3 7 9 1 5 2 9 9 0 3 8 5 3 6 0 9 4 6 2 5 0 2 7 4 6 6 8 6 6 8 6 9 1
+ 7 2 5 9 9 0 7 2 7 6 7 0 6 5 2 4 7 2 0 9 9 2 2 9 4 4]
+---------------------------------------------------------
+Total images: 2
+---------------------------------------------------------
+Batch 26/32
+True Labels: [2 3 3 2 1 7 0 7 6 4 1 3 8 7 4 5 9 2 5 1 8 7 3 7 1 5 5 0 9 1 4 0 6 3 3 6 0
+ 4 9 7 5 1 6 8 9 5 5 7 9 3 8 3 8 1 5 3 5 0 5 5 3 8 6 7 7 7 3 7 0 5 9 0 2 5
+ 5 3 1 7 7 8 6 5 9 3 8 9 5 3 7 9 1 7 0 0 3 7 2 5 8 1]
+Original Predictions: [2 3 3 2 1 7 0 7 6 4 1 3 8 7 4 5 9 2 5 1 8 7 3 7 1 5 5 0 9 1 4 0 6 3 3 6 0
+ 4 9 7 5 1 6 8 9 5 5 7 9 3 8 3 8 1 5 3 5 0 5 5 3 8 6 7 7 7 3 7 0 5 9 0 2 5
+ 5 3 1 7 7 8 6 5 5 3 8 9 5 3 7 9 1 7 0 0 3 7 2 3 8 1]
+Adversarial Predictions: [2 3 3 2 1 7 0 7 6 4 1 3 8 7 4 5 9 2 5 1 8 7 3 7 1 5 5 0 9 1 4 0 6 3 3 6 0
+ 4 9 7 5 1 6 8 9 5 5 7 9 3 8 3 8 1 5 3 5 0 5 5 3 8 6 7 7 7 3 7 0 5 9 0 2 5
+ 5 3 1 7 7 8 6 5 5 3 8 9 5 3 7 9 1 7 0 0 3 7 2 3 8 1]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 27/32
+True Labels: [8 6 2 9 5 7 5 7 8 6 2 5 1 4 8 4 5 8 3 0 6 2 7 3 3 2 1 0 7 3 4 0 3 9 3 2 8
+ 9 0 3 8 0 7 6 5 4 7 3 9 0 8 6 2 5 6 1 0 0 4 4 0 1 2 3 2 7 7 8 5 2 5 7 6 9
+ 1 4 1 6 4 2 4 3 5 4 3 9 5 0 1 5 3 8 9 1 9 7 9 5 5 2]
+Original Predictions: [8 6 2 9 5 7 5 7 8 6 2 5 1 4 8 4 5 8 3 0 6 2 7 3 3 2 1 0 7 3 4 0 3 9 3 2 8
+ 9 0 3 8 0 7 6 5 4 7 3 9 0 8 6 2 5 1 1 0 0 4 4 0 1 2 3 2 7 7 8 5 2 5 7 6 9
+ 1 4 1 6 4 2 4 3 5 4 3 9 5 0 1 5 3 8 9 1 9 7 9 5 5 2]
+Adversarial Predictions: [8 6 2 9 5 7 5 7 8 6 2 5 1 4 8 4 5 8 3 0 6 2 7 3 3 2 1 0 7 3 4 0 3 9 3 2 8
+ 9 0 3 8 0 7 6 5 4 7 3 9 0 8 6 2 5 1 1 0 0 4 4 0 1 2 3 2 7 7 8 5 2 5 7 6 9
+ 1 4 1 6 4 2 4 3 5 4 3 9 5 0 1 5 3 8 9 1 9 7 9 5 5 2]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 28/32
+True Labels: [7 4 6 0 1 1 1 0 4 4 7 6 3 0 0 4 3 0 6 1 9 6 1 3 8 1 2 5 6 2 7 3 6 0 1 9 7
+ 6 6 8 9 2 9 5 8 3 1 0 0 7 6 6 2 1 6 9 3 1 8 6 9 0 6 0 0 0 6 3 5 9 3 4 5 5
+ 8 5 3 0 4 0 2 9 6 8 2 3 1 2 1 1 5 6 9 8 0 6 6 5 5 3]
+Original Predictions: [7 4 6 0 1 1 1 0 4 4 7 6 3 0 0 4 3 0 6 1 9 6 1 3 8 1 2 5 6 2 7 3 6 0 1 9 7
+ 6 6 8 9 2 9 5 8 3 1 0 0 7 6 6 2 1 6 9 3 1 8 6 9 0 6 0 0 0 6 3 5 9 3 9 5 5
+ 8 5 3 0 4 0 2 9 6 8 2 3 1 2 1 1 5 6 9 8 0 6 6 5 5 3]
+Adversarial Predictions: [7 4 6 0 1 1 1 0 4 4 7 6 3 0 0 4 3 0 6 1 9 6 1 3 8 1 2 5 6 2 7 3 6 0 2 9 7
+ 6 6 8 9 2 9 5 8 3 1 0 0 7 6 2 2 1 6 9 3 1 8 6 9 0 6 0 0 0 6 3 5 9 3 9 5 5
+ 8 5 3 0 4 0 2 9 6 8 2 3 1 2 1 1 5 6 9 8 0 6 6 5 5 3]
+---------------------------------------------------------
+Total images: 2
+---------------------------------------------------------
+Batch 29/32
+True Labels: [8 6 2 1 4 5 4 3 7 8 5 0 9 3 5 1 1 0 4 4 7 0 1 7 0 1 6 1 4 5 6 6 5 7 8 4 4
+ 7 2 5 3 7 0 7 7 9 6 4 2 8 5 7 8 3 9 5 8 9 9 8 6 2 8 9 2 3 6 1 1 8 9 3 4 0
+ 7 9 6 4 1 4 1 3 4 9 3 1 4 7 7 4 7 2 9 3 0 8 8 8 4 0]
+Original Predictions: [8 6 2 1 4 5 4 3 7 8 5 0 9 3 5 1 1 0 4 4 7 0 1 7 0 1 6 1 4 5 6 6 5 7 8 4 4
+ 7 2 5 3 7 0 7 7 9 6 4 2 8 5 7 8 3 9 5 8 9 9 8 5 2 8 9 2 3 6 1 1 8 9 3 4 0
+ 7 9 6 4 1 4 1 3 4 9 3 1 4 7 7 4 7 2 9 3 0 8 0 8 4 0]
+Adversarial Predictions: [8 6 2 1 4 5 4 3 7 8 5 0 9 3 5 1 1 0 4 4 7 0 1 7 0 1 6 1 4 5 6 6 5 7 8 4 4
+ 7 2 5 3 7 0 7 7 9 6 4 2 8 5 7 8 3 9 5 8 9 9 8 5 2 8 9 2 3 6 1 1 8 9 3 4 0
+ 7 9 6 4 1 4 1 3 4 9 3 1 4 7 7 4 7 2 9 3 0 8 0 8 4 0]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 30/32
+True Labels: [4 4 1 5 2 8 3 4 9 5 2 8 1 5 3 7 9 4 2 5 6 3 5 9 3 5 9 3 1 9 5 3 0 6 9 8 4
+ 0 4 9 2 9 0 1 0 3 1 6 5 8 1 5 3 3 0 3 5 5 9 2 8 7 0 4 9 1 9 7 7 5 5 2 0 9
+ 1 8 6 2 3 9 6 2 1 9 1 3 5 5 0 3 8 3 3 7 6 6 0 1 4 0]
+Original Predictions: [4 4 1 5 2 8 3 4 9 5 2 8 1 5 3 7 9 4 2 5 6 3 5 9 3 5 9 2 1 9 5 3 0 6 9 8 4
+ 0 4 5 2 9 0 1 0 3 1 6 5 8 1 5 3 3 0 3 5 5 9 2 8 7 0 4 9 1 9 7 7 5 5 2 0 9
+ 1 8 6 2 3 9 6 2 1 9 1 3 5 5 0 3 8 3 3 7 6 5 0 1 4 0]
+Adversarial Predictions: [4 4 1 5 2 8 3 4 9 5 2 8 1 5 3 7 9 4 2 5 6 3 5 9 3 5 9 2 1 9 5 3 0 6 9 8 4
+ 0 4 5 2 9 0 1 0 3 1 6 5 8 1 5 3 3 0 3 5 5 9 2 8 7 0 4 9 1 9 7 7 5 5 2 0 9
+ 1 8 6 2 3 9 6 2 1 9 1 3 5 5 0 3 8 3 3 7 6 5 0 1 4 0]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+---------------------------------------------------------
+Batch 31/32
+True Labels: [6 9 8 1 2 9 9 5 9 7 3 7 8 0 1 3 0 4 6 1 0 2 5 8 4 4 1 1 5 4 6 6 0 6 9 2 6
+ 2 7 1 7 9 4 0 0 3 8 2 2 3 1 6 0 5 7 7 9 2 6 7 9 7 8 6 8 8 4 6 8 4 1 2 8 1
+ 3 9 4 0 3 7 3 2 3 3 7 3 4 0 6 2 0 8 1 5 3 5 4 1 7 1]
+Original Predictions: [6 9 8 1 2 9 9 5 9 7 3 7 8 0 1 3 0 4 6 1 0 2 5 8 4 4 1 1 5 4 0 6 0 6 9 2 6
+ 2 7 1 7 9 4 0 0 3 8 2 2 3 1 6 0 5 7 7 9 2 6 7 5 7 8 6 8 8 4 6 8 4 1 2 8 1
+ 3 9 4 0 3 7 3 2 3 3 7 3 4 0 6 2 0 8 1 5 3 5 4 1 7 1]
+Adversarial Predictions: [2 9 8 1 2 9 9 5 9 7 3 7 8 0 2 3 0 4 6 1 0 2 5 8 4 4 1 1 5 4 0 6 0 6 9 2 6
+ 2 7 1 7 9 4 0 0 3 8 2 2 3 1 6 0 5 7 7 9 2 6 7 5 7 8 6 8 8 4 6 8 4 1 2 8 2
+ 3 9 4 0 3 7 3 2 3 3 7 3 4 0 6 2 0 8 1 5 3 5 4 1 7 1]
+---------------------------------------------------------
+Total images: 3
+---------------------------------------------------------
+Batch 32/32
+True Labels: [5 7 5 7 3 2 2 7 3 7 3 7 8 5 4 5 2 5 6 5 3 6 7 4 1 7 1 5 2 3 6 3 1 4 2 6 7
+ 4 3 8 0 6 2 1 6 5 3 9 1 9 3 2 1 8 4 4 6 5 8 6 9 7 7 8 6 9 7 3 9 4 0 5 4 6
+ 4 1 2 3 0 0 2 6 6 5 7 0 8 6 4 7 9 0 7 3 4 2 1 8 8 5]
+Original Predictions: [5 7 3 7 3 2 2 7 3 7 3 7 8 5 4 5 2 5 6 5 3 6 7 4 1 7 1 5 2 3 6 3 1 4 2 6 7
+ 4 3 8 0 6 2 1 6 5 3 9 1 9 3 2 1 8 4 4 6 5 8 6 9 7 7 8 6 9 7 3 9 4 0 5 4 6
+ 4 1 2 3 0 0 2 6 6 5 7 0 8 6 4 7 9 0 7 3 4 2 1 8 8 5]
+Adversarial Predictions: [5 7 3 7 3 2 2 7 3 7 3 7 8 5 4 5 2 5 6 5 3 6 7 4 1 7 1 5 2 3 6 3 1 4 2 6 7
+ 4 3 8 0 6 2 1 6 5 3 9 1 9 3 2 1 8 4 4 6 5 8 6 9 7 7 8 6 9 7 3 9 4 0 5 4 6
+ 4 1 2 3 0 0 2 6 6 5 7 0 8 6 4 7 9 0 7 3 4 2 1 8 8 5]
+---------------------------------------------------------
+No interesting cases (where original is correct and adversarial is wrong) in this batch.
+AT-GAN Attack Success Rate (Fooling Rate): 98.97%
+AT-GAN Attack Success Rate: 98.97%
